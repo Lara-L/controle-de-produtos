@@ -1,0 +1,26 @@
+application:
+  protocol: http
+  url: http://localhost:8033
+  name: trabalhoN2
+  environment: dev
+
+server:
+  port: 8033
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    url: jdbc:postgresql://trabalho-db:5432/produtoDB
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    defer-datasource-initialization: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
